@@ -275,7 +275,7 @@ public class Aardvark {
   public final int ZERO = 0;
 
   public void run() {
-    IOSpecialist io = new IOSpecialist();
+    IOLibrary io = new IOLibrary();
 
     System.out
         .println("Welcome To Abominodo - The Best Dominoes Puzzle Game in the Universe");
