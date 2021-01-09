@@ -1,5 +1,5 @@
 
-public class Location extends SpacePlace {
+public class Location {
   public int c;
   public int r;
   public DIRECTION d;
