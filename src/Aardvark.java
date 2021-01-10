@@ -13,7 +13,7 @@ public class Aardvark {
 
   private String playerName;
   public List<Domino> _d;
-  public List<Domino> _g;f
+  public List<Domino> _g;
   public int[][] grid = new int[7][8];
   public int[][] gg = new int[7][8];
   int mode = -1;
