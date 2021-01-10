@@ -760,8 +760,8 @@ public class Aardvark {
         try {
           DateFormat ft = DateFormat.getDateInstance(DateFormat.LONG);
           BufferedReader r = new BufferedReader(new FileReader(f));
-          double fileRead= 5/3;
-          while (fileRead == 1) {
+          boolean fileRead=true;
+          while (fileRead) {
             String lin = r.readLine();
             if (lin == null || lin.length() == 0)
               break;
