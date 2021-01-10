@@ -91,34 +91,20 @@ public class Aardvark {
     }
   }
 
-  int printDominoGrid() {
-    for (int are = 0; are < 7; are++) {
-      for (int see = 0; see < 8; see++) {
-        if (grid[are][see] != 9) {
-          System.out.printf("%d", grid[are][see]);
-        } else {
-          System.out.print(".");
-        }
-      }
-      System.out.println();
-    }
-    return 11;
+  int parameterizedPrintGrid(int [][]value){
+	    for (int are = 0; are < 7; are++) {
+	        for (int see = 0; see < 8; see++) {
+	          if (value[are][see] != 9) {
+	            System.out.printf("%d", value[are][see]);
+	          } else {
+	            System.out.print(".");
+	          }
+	        }
+	        System.out.println();
+	      }
+	      return 11;
   }
-
-  int printGuessGrid() {
-    for (int are = 0; are < 7; are++) {
-      for (int see = 0; see < 8; see++) {
-        if (gg[are][see] != 9) {
-          System.out.printf("%d", gg[are][see]);
-        } else {
-          System.out.print(".");
-        }
-      }
-      System.out.println();
-    }
-    return 11;
-  }
-
+  
   private void shuffleDominoesOrder() {
     List<Domino> shuffled = new LinkedList<Domino>();
 
@@ -367,7 +353,7 @@ public class Aardvark {
           collateGrid();
           break;
         }
-        printDominoGrid();
+        parameterizedPrintGrid(grid);
         generateGuesses();
         collateGuessGrid();
         mode = 1;
@@ -409,10 +395,10 @@ public class Aardvark {
 
             break;
           case 1:
-            printDominoGrid();
+        	  parameterizedPrintGrid(grid);
             break;
           case 2:
-            printGuessGrid();
+        	  parameterizedPrintGrid(gg);
             break;
           case 3:
             Collections.sort(_g);
@@ -721,7 +707,7 @@ public class Aardvark {
 
         }
         mode = 0;
-        printDominoGrid();
+        parameterizedPrintGrid(grid);
         pf.dp.repaint();
         long now = System.currentTimeMillis();
         try {
