@@ -13,7 +13,7 @@ public class Aardvark {
 
   private String playerName;
   public List<Domino> _d;
-  public List<Domino> _g;
+  public List<Domino> _g;f
   public int[][] grid = new int[7][8];
   public int[][] gg = new int[7][8];
   int mode = -1;
@@ -50,8 +50,6 @@ public class Aardvark {
   private void generateGuesses() {
     _g = new LinkedList<Domino>();
     int count = 0;
-    int x = 0;
-    int y = 0;
     for (int l = 0; l <= 6; l++) {
       for (int h = l; h <= 6; h++) {
         Domino d = new Domino(h, l);
